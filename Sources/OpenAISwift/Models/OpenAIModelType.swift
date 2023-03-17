@@ -12,6 +12,9 @@ public enum OpenAIModelType {
     /// ``GPT3`` Family of Models
     case gpt3(GPT3)
     
+    /// ``GPT3.5`` Family of Models
+    case gpt3_5(GPT3_5)
+    
     /// ``Codex`` Family of Models
     case codex(Codex)
     
@@ -24,7 +27,7 @@ public enum OpenAIModelType {
     public var modelName: String {
         switch self {
         case .gpt3(let model): return model.rawValue
-        case .GPT3_5(let model): return model.rawValue
+        case .gpt3_5(let model): return model.rawValue
         case .codex(let model): return model.rawValue
         case .feature(let model): return model.rawValue
         case .chat(let model): return model.rawValue
