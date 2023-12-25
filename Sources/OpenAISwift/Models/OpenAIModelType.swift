@@ -52,28 +52,19 @@ public enum OpenAIModelType {
     
     /// A set of models that can understand and generate natural language
     ///
-    /// [GPT-3 Models OpenAI API Docs](https://beta.openai.com/docs/models/gpt-3)
-    public enum GPT3: String {
+    /// [GPT-Base Models OpenAI API Docs](https://platform.openai.com/docs/models/gpt-base)
+    public enum GPT3_Base: String {
         
-        /// Most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text.
+        /// Replacement for the GPT-3 ada and babbage base models. 16,384 tokens
         ///
-        /// > Model Name: davinci
-        case davinci = "davinci"
+        /// > Model Name: babbage-002
+        case babbage = "babbage-002"
         
-        /// Very capable, but faster and lower cost than GPT3 ``davinci``.
+        /// Replacement for the GPT-3 curie and davinci base models. 16,384 tokens
         ///
-        /// > Model Name: text-curie-001
-        case curie = "text-curie-001"
+        /// > Model Name: davinci-002
+        case curie = "davinci-002"
         
-        /// Capable of straightforward tasks, very fast, and lower cost.
-        ///
-        /// > Model Name: text-babbage-001
-        case babbage = "text-babbage-001"
-        
-        /// Capable of very simple tasks, usually the fastest model in the GPT-3 series, and lowest cost.
-        ///
-        /// > Model Name: text-ada-001
-        case ada = "text-ada-001"
     }
     
     /// A set of models that can understand and generate natural language
@@ -84,32 +75,10 @@ public enum OpenAIModelType {
         /// Can do any language task with better quality, longer output, and consistent instruction-following than the curie, babbage, or ada models. Also supports inserting completions within text.
         /// Max Tokens: 4,097 tokens
         /// Training Data: Up to Jun 2021
-        /// > Model Name: text-davinci-003
-        case davinci = "text-davinci-003"
-        
-        /// Similar capabilities to text-davinci-003 but trained with supervised fine-tuning instead of reinforcement learning
-        /// Max Tokens: 4,097 tokens
-        /// Training Data: Up to Jun 2021
-        /// > Model Name: text-davinci-002
-        case davinci002 = "text-davinci-002"
+        /// > Model Name: gpt-3.5-turbo-instruct
+        case gpt-3.5-turbo = "gpt-3.5-turbo-instruct"
     }
     
-    /// A set of models that can understand and generate code, including translating natural language to code
-    ///
-    /// [Codex Models OpenAI API Docs](https://beta.openai.com/docs/models/codex)
-    ///
-    ///  >  Limited Beta
-    public enum Codex: String {
-        /// Most capable Codex model. Particularly good at translating natural language to code. In addition to completing code, also supports inserting completions within code.
-        ///
-        /// > Model Name: code-davinci-002
-        case davinci = "code-davinci-002"
-        
-        /// Almost as capable as ``davinci`` Codex, but slightly faster. This speed advantage may make it preferable for real-time applications.
-        ///
-        /// > Model Name: code-cushman-001
-        case cushman = "code-cushman-001"
-    }
     
     
     /// A set of models that are feature specific.
@@ -133,7 +102,7 @@ public enum OpenAIModelType {
         
         /// Snapshot of gpt-3.5-turbo from March 1st 2023. Unlike gpt-3.5-turbo, this model will not receive updates, and will only be supported for a three month period ending on June 1st 2023.
         /// > Model Name: gpt-3.5-turbo-0301
-        case chatgpt0301 = "gpt-3.5-turbo-0301"
+        case chatgpt1106 = "gpt-3.5-turbo-1106"
         
         /// More capable than any GPT-3.5 model, able to do more complex tasks, and optimized for chat. Will be updated with our latest model iteration.
         /// Max Tokens: 8,192 tokens
@@ -156,17 +125,17 @@ public enum OpenAIModelType {
         /// > Model Name: gpt-4
         case gpt4 = "gpt-4"
         
-        /// Snapshot of gpt-4 from March 14th 2023. Unlike gpt-4, this model will not receive updates, and will be deprecated 3 months after a new version is released.
-        /// > Model Name: gpt-4-0314
-        case gpt4_0314 = "gpt-4-0314"
+        /// The latest GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Returns a maximum of 4,096 output tokens. This preview model is not yet suited for production traffic
+        /// > Model Name: gpt-4-1106-preview 
+        case gpt-4-1106-preview = "gpt-4-1106-preview"
         
-        /// Same capabilities as the base gpt-4 mode but with 4x the context length. Will be updated with our latest model iteration.
+        /// Currently points to gpt-4-32k-0613
         /// > Model Name: gpt-4-32k
         case gpt4_32k = "gpt-4-32k"
         
-        /// Snapshot of gpt-4-32 from March 14th 2023. Unlike gpt-4-32k, this model will not receive updates, and will be deprecated 3 months after a new version is released.
+        /// Snapshot of gpt-4-32k from June 13th 2023 with improved function calling support.
         /// > Model Name: gpt-4-32k
-        case gpt4_32k_0314 = "gpt-4-32k-0314"
+        case ggpt-4-32k-0613 = "gpt-4-32k-0613"
     }
     
     
