@@ -10,7 +10,7 @@ import Foundation
 /// The type of model used to generate the output
 public enum OpenAIModelType {
     /// ``GPT3`` Family of Models
-    case gpt3(GPT3)
+    case gpt3(GPT3_Base)
     
     /// ``GPT3.5`` Family of Models
     case gpt3_5(GPT3_5)
@@ -63,7 +63,7 @@ public enum OpenAIModelType {
         /// Replacement for the GPT-3 curie and davinci base models. 16,384 tokens
         ///
         /// > Model Name: davinci-002
-        case curie = "davinci-002"
+        case davinci = "davinci-002"
         
     }
     
