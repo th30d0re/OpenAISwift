@@ -76,7 +76,7 @@ public enum OpenAIModelType {
         /// Max Tokens: 4,097 tokens
         /// Training Data: Up to Jun 2021
         /// > Model Name: gpt-3.5-turbo-instruct
-        case gpt-3.5-turbo = "gpt-3.5-turbo-instruct"
+        case gpt_35_turbo = "gpt-3.5-turbo-instruct"
     }
     
     
@@ -127,7 +127,7 @@ public enum OpenAIModelType {
         
         /// The latest GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Returns a maximum of 4,096 output tokens. This preview model is not yet suited for production traffic
         /// > Model Name: gpt-4-1106-preview 
-        case gpt-4-1106-preview = "gpt-4-1106-preview"
+        case gpt4_1106preview = "gpt-4-1106-preview"
         
         /// Currently points to gpt-4-32k-0613
         /// > Model Name: gpt-4-32k
@@ -135,7 +135,7 @@ public enum OpenAIModelType {
         
         /// Snapshot of gpt-4-32k from June 13th 2023 with improved function calling support.
         /// > Model Name: gpt-4-32k
-        case ggpt-4-32k-0613 = "gpt-4-32k-0613"
+        case gpt4_32k_0613 = "gpt-4-32k-0613"
     }
     
     
