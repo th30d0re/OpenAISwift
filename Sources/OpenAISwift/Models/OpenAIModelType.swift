@@ -38,7 +38,6 @@ public enum OpenAIModelType {
         case .gpt4(let model): return model.rawValue
         case .gpt3(let model): return model.rawValue
         case .gpt3_5(let model): return model.rawValue
-        case .codex(let model): return model.rawValue
         case .feature(let model): return model.rawValue
         case .chat(let model): return model.rawValue
         case .embedding(let model): return model.rawValue
