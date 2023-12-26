@@ -15,9 +15,6 @@ public enum OpenAIModelType {
     /// ``GPT3.5`` Family of Models
     case gpt3_5(GPT3_5)
     
-    /// ``Codex`` Family of Models
-    case codex(Codex)
-    
     /// ``Feature`` Family of Models
     case feature(Feature)
     
